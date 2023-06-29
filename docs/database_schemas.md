@@ -25,24 +25,24 @@ nav_order: 1
 
 ## Scheduled_Triggers
 
-|id        	    |cron_expr      |last_run                   |next_run                  |process_path             |status            |is_git_repo |force_update|
-|---        	|---            |---                        |---                       |---                      |---               |---         |---         |
-|UUID         	|varchar(255)   |datetime                   |datetime                  |text                     |tinyInt (FK)      |bit         |bit         |
-|kasdlkf 	    |'0 0 * * *'    |2023-06-19 00:00:00.000    |2023-06-20 00:00:00.000   |C:\processes\process1.py |1 (Running)       |True        |True        |
+|id        	    |cron_expr      |last_run                   |next_run                  |process_path             |status            |is_git_repo |force_update |blocking    |
+|---        	|---            |---                        |---                       |---                      |---               |---         |---          |---         |
+|UUID         	|varchar(255)   |datetime                   |datetime                  |text                     |tinyInt (FK)      |bit         |bit          |bit         |
+|kasdlkf 	    |'0 0 * * *'    |2023-06-19 00:00:00.000    |2023-06-20 00:00:00.000   |C:\processes\process1.py |1 (Running)       |True        |True         |True        |
 
 ## Email_Triggers
 
-|id        	    |email_folder   |last_run                   |process_path             |status            |is_git_repo |force_update|
-|---        	|---            |---                        |---                      |---               |---         |---         |
-|UUID         	|text           |datetime                   |text                     |tinyInt (FK)      |bit         |bit         |
-|sadfsd	        |Inbox/AKBO     |2023-06-19 00:00:00.000    |C:\processes\process1.py |1 (Running)       |True        |True        |
+|id        	    |email_folder   |last_run                   |process_path             |status            |is_git_repo |force_update  |blocking    |
+|---        	|---            |---                        |---                      |---               |---         |---           |---         |
+|UUID         	|text           |datetime                   |text                     |tinyInt (FK)      |bit         |bit           |bit         |
+|sadfsd	        |Inbox/AKBO     |2023-06-19 00:00:00.000    |C:\processes\process1.py |1 (Running)       |True        |True          |True        |
 
 ## Single_Triggers
 
-|id        	    |time                       |last_run                   |process_path             |status            |is_git_repo |force_update|
-|---        	|---                        |---                        |---                      |---               |---         |---         |
-|UUID         	|datetime                   |datetime                   |text                     |tinyInt (FK)      |bit         |bit         |
-|jrthzc 	    |2023-06-30 12:30:00.000    |2023-06-19 00:00:00.000    |C:\processes\process1.py |3 (Done)          |True        |True        |
+|id        	    |time                       |last_run                   |process_path             |status            |is_git_repo |force_update  |blocking    |
+|---        	|---                        |---                        |---                      |---               |---         |---           |---         |
+|UUID         	|datetime                   |datetime                   |text                     |tinyInt (FK)      |bit         |bit           |bit         |
+|jrthzc 	    |2023-06-30 12:30:00.000    |2023-06-19 00:00:00.000    |C:\processes\process1.py |3 (Done)          |True        |True          |True        |
 
 ## Trigger_Status
 
