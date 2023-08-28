@@ -8,7 +8,7 @@ nav_order: 0
 <script> const toggleDarkMode = document.querySelector('.js-toggle-dark-mode'); jtd.addEvent(toggleDarkMode, 'click', function(){ if (jtd.getTheme() === 'dark') { jtd.setTheme('light'); toggleDarkMode.textContent = 'Switch to Dark Mode'; } else { jtd.setTheme('dark'); toggleDarkMode.textContent = 'Switch to Light Mode'; } }); </script>
 
 This is a **bare-minimum** template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
-
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
 
 More specifically, the created site:
