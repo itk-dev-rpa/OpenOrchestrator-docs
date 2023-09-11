@@ -67,7 +67,7 @@ Process path: The absolute path to the process on the computer or
 a URL to the git repo hosting the process.
 
 Arguments: Arguments to be passed to the process at runtime.
-This value is passed as a raw string. We recommend using a json string for more
+This value is passed as a raw string. It's recommended using a json string for more
 complex arguments.
 
 Is git repo: Toggle this on if the process path given is a URL to a git repo.
@@ -76,4 +76,56 @@ Is blocking: If this is off the process is allowed to run parallel to other
 non-blocking processes. If it's on the process will always run alone
 on the worker machine.
 
+### Creating Queue triggers
 
+TODO
+
+### Creating single triggers
+
+When creating a new single trigger the following pop-up is shown:
+
+![single trigger](illustrations/orchestrator/new%20single%20trigger.png)
+
+Process name: The name of the process. This will be shown in the triggers tab as 
+well as any logs created by the process.
+
+Trigger date: The date the process should run.
+
+Trigger time: The time on trigger date the process should run.
+
+Process path: The absolute path to the process on the computer or
+a URL to the git repo hosting the process.
+
+Arguments: Arguments to be passed to the process at runtime.
+This value is passed as a raw string. It's recommended using a json string for more
+complex arguments.
+
+Is git repo: Toggle this on if the process path given is a URL to a git repo.
+
+Is blocking: If this is off the process is allowed to run parallel to other
+non-blocking processes. If it's on the process will always run alone
+
+## Logs
+
+The 'Logs' tab is where logs created in automation processes are viewed.
+
+![logs](illustrations/orchestrator/logs.png)
+
+The logs are shown in cronological order. 
+
+The logs can be filtered on time, level and process name.
+
+To view log messages that don't fit in the table double click the log to open it in a pop-up window (WIP).
+
+## Constants
+
+The constants tab is where you can view, edit and add constants and credentials used across all processes.
+
+![constants](illustrations/orchestrator/constants.png)
+
+A constant is a simple text value that can be accessed across all processes.
+
+A credential is a username-password pair that can be accessed across all processes.
+Passwords are encrypted using AES before being sent to the central database using the encryption key
+given under the settings tab. The passwords shown in the table are encrypted.
+It's not possible to access unencrypted passwords in the Orchestrator.
