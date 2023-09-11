@@ -1,8 +1,8 @@
-title: OS2RPA Documentation
-description: Documentation for the OS2RPA project
+title: OpenOrchestrator Documentation
+description: Documentation for the OpenOrchestrator project
 theme: just-the-docs
 
-url: https://itk-dev-rpa.github.io/os2rpa-docs
+url: https://itk-dev-rpa.github.io/OpenOrchestrator-docs/
 
 aux_links:
-  Project Repository: https://github.com/itk-dev-rpa/OS2RPA-docs
+  Project Repository: https://github.com/itk-dev-rpa/OpenOrchestrator-docs
