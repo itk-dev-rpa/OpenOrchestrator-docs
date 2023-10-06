@@ -29,6 +29,9 @@ when Orchestrator is closed.
 5. The first time OpenOrchestrator is used you can press 'Initialize Database' to create all the needed
 tables in the central database.
 
+**Tip:** Both values can be filled automatically if 'OpenOrchestratorConnString' and 'OpenOrchestratorKey' are
+defined in the environment variables.
+
 ![settings](illustrations\orchestrator\settings.png)
 
 ## Triggers
@@ -111,11 +114,13 @@ The 'Logs' tab is where logs created in automation processes are viewed.
 
 ![logs](illustrations/orchestrator/logs.png)
 
-The logs are shown in cronological order. 
+The logs are shown in chronological order. 
 
 The logs can be filtered on time, level and process name.
 
-To view log messages that don't fit in the table double click the log to open it in a pop-up window (WIP).
+To view log messages that don't fit in the table double click the log to open it in a pop-up window.
+It's also possible to copy the text to clipboard by pressing ctrl+c when the pop-up is in focus. 
+
 
 ## Constants
 
