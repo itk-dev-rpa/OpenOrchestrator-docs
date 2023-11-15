@@ -43,7 +43,7 @@ When OpenOrchestrator has been installed type into the terminal:
 python -m OpenOrchestrator -o
 ```
 
-This will launch Orchestrator and you will see a screen window like this:
+This will launch Orchestrator and you will see a window like this:
 ![Orchestrator Settings tab](images/settings-tab.png)
 
 Insert the connection string to the database and generate a new encryption key
