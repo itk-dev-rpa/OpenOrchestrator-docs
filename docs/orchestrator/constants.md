@@ -23,6 +23,8 @@ multiple automation processes.
 **Credentials** has a name, username and password and are used to store login credentials used in automation
 processes in a safe and central location.
 
+---
+
 ## Description of the UI
 
 1. Table constants.
@@ -40,6 +42,8 @@ The **Delete** button will delete the selected trigger. This is permanent and ca
 
 The **New constant** and **New credential** buttons are used to create new constants and credentials.
 
+---
+
 ## Creating new constants
 
 When creating a new constant the following pop-up is shown:
@@ -51,6 +55,8 @@ If you try to create a new constant with an existing name you'll overwrite the e
 
 **Value**: The value of the constant. Note that this is a string value and will need to be converted by the 
 automation process if needed.
+
+---
 
 ## Creating new credentials
 
@@ -67,9 +73,13 @@ If you try to create a new credential with an existing name you'll overwrite the
 defined in the Settings tab before being sent to the database. The shown value in the table 
 is the encrypted password. There is no way to retrieve unencrypted passwords from Orchestrator.
 
+---
+
 ## Editing existing constants and credentials
 
 To edit an existing constant or credential simply double-click it in the table.
+
+---
 
 ## Complex values and secrets
 

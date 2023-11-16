@@ -20,6 +20,7 @@ The newest version of Python is recommended but you need at least version 3.10.
 
 Go to [Download Python](www.python.org/downloads) to get the newest version of Python.
 
+---
 
 ## Install OpenOrchestrator
 
@@ -34,6 +35,8 @@ If you want a specific version e.g. v0.0.1:
 ```
 pip install OpenOrchestrator==0.0.1
 ```
+
+---
 
 ## Setup Orchestrator
 
@@ -58,6 +61,8 @@ indicating the connection was successful.
 The first time OpenOrchestrator connects to a freshly installed database you need to press the
 'Initialize Database' button. This will setup all the needed tables in the database. Pressing
 the button again later should have no effect.
+
+---
 
 ## Using private GIT repos
 

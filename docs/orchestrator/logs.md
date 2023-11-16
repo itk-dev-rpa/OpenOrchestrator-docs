@@ -27,6 +27,8 @@ A log contains the following information:
 
 **Message**: The message of the log.
 
+---
+
 ## Description of the UI
 
 1. Table of logs.
@@ -34,6 +36,8 @@ A log contains the following information:
 3. Update button.
 
 ![logging tab](images/logs.png)
+
+---
 
 ## Filter Options
 
@@ -47,7 +51,9 @@ At the moment only 100 logs are fetched. To get to the specific logs you want to
 **Process name**: The name of the process that created the log. The dropdown will
 automatically contain all unique process names in the log database.
 
-**Log level**: The level the log was created at. Trace, Info ors Error.
+**Log level**: The level the log was created at. Trace, Info or Error.
+
+---
 
 ## Viewing Multiline Logs
 

@@ -23,6 +23,8 @@ There are 3 different kinds of triggers:
 - **Queue triggers**: Run the process when a database queue reaches a minimum number of elements.
 - **Single triggers**: Run the process once at a given date and time.
 
+---
+
 ## Description of the UI
 
 1. Overview of scheduled triggers.
@@ -139,4 +141,5 @@ on the worker machine.
 
 ## Editing an existing trigger
 
-To edit an existing trigger simply double-click it in the tables.
+To edit an existing trigger simply double-click it in the tables. This will open a pop-up
+to edit the trigger.

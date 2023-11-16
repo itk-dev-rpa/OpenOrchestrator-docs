@@ -4,9 +4,17 @@ layout: home
 nav_order: 0
 ---
 
-# Intro
+# Home
 
 This documentation introduces the OpenOrchestrator project v1.0.0.
+
+## Reading these docs
+
+This doc-site is written in a way that's meant to be read from A to Z.
+To get the full understanding of OpenOrchestrator it's recommended to go
+through all pages from top to bottom in order, reading the entire pages.
+
+## What is OpenOrchestrator?
 
 OpenOrchestrator is used to manage automated processes running on dedicated worker machines.
 The primary focus while developing has been to make deployment of RPA solutions as easy as possible.
