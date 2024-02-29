@@ -6,7 +6,7 @@ nav_order: 0
 
 # Home
 
-This documentation introduces the OpenOrchestrator project v1.3.1.
+This documentation introduces the OpenOrchestrator project v1.2.0.
 
 ## Reading these docs
 
