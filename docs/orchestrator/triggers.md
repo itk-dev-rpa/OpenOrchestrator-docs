@@ -27,25 +27,44 @@ There are 3 different kinds of triggers:
 
 ## Description of the UI
 
-1. Overview of scheduled triggers.
-2. Overview of Queue triggers.
-3. Overview of Single triggers.
-4. Control buttons.
+The three **New trigger** buttons are used to create new triggers.
+
+The table shows all triggers currently in the database. Here you can see the name of the
+trigger and process, the type of trigger, the last time the trigger was activated and when it's
+scheduled to run again (if applicaple). If a trigger's next run time is in the past a red
+badge will appear notifying that the trigger is overdue.
+
+To see more details about a trigger you can click on it in the table.
 
 ![triggers](images/triggers.png)
 
-### Control buttons
+---
 
-The **Update tables** button updates all three trigger tables with the information in the database.
-At the moment the tables will not automatically update.
+## Creating single triggers
 
-The **Enable** button is used to enable the selected trigger if it is currently Paused, Done or Failed.
+When creating a new single trigger the following pop-up is shown:
 
-The **Disable** button sets the selected trigger to Paused.
+![single trigger](images/new%20single%20trigger.png)
 
-The **Delete** button deletes the selected trigger. This is permanent and can't be reversed.
+**Trigger Name**: The name of the trigger to be shown in the trigger table.
 
-The three **New trigger** buttons are used to create new triggers.
+**Process Name**: The name of the process. This will be shown in the triggers tab as 
+well as any logs created by the process.
+
+**Trigger Time**: The time and date to trigger the process.
+
+**Process path**: The absolute path to the process on the computer or
+a URL to the git repo hosting the process.
+
+**Is path a git repo?**: Toggle this on if the process path given is a URL to a git repo.
+
+**Arguments**: Arguments to be passed to the process at runtime.
+This value is passed as a raw string. It's recommended using a json string for more
+complex arguments.
+
+**Is process blocking?**: If this is off the process is allowed to run parallel to other
+non-blocking processes. If it's on the process will always run alone
+on the worker machine.
 
 ---
 
@@ -61,18 +80,21 @@ When creating a new scheduled trigger the following pop-up is shown:
 well as any logs created by the process.
 
 **Cron expression**: The run interval of the process described as a cron expression.
-Use the help link if you don't know how to write cron expressions.
+Use the help link (blue question mark) if you don't know how to write cron expressions.
+
+**Trigger time**: The next time the trigger should run. This is automatically filled
+to be the next time the cron expression is fulfilled.
 
 **Process path**: The absolute path to the process on the computer or
 a URL to the git repo hosting the process.
+
+**Is path a git repo?**: Toggle this on if the process path given is a URL to a git repo.
 
 **Arguments**: Arguments to be passed to the process at runtime.
 This value is passed as a raw string. It's recommended using a json string for more
 complex arguments.
 
-**Is git repo?**: Toggle this on if the process path given is a URL to a git repo.
-
-**Is blocking?**: If this is off the process is allowed to run parallel to other
+**Is process blocking?**: If this is off the process is allowed to run parallel to other
 non-blocking processes. If it's on the process will always run alone
 on the worker machine.
 
@@ -94,46 +116,16 @@ well as any logs created by the process.
 **Min batch size**: The minimum number of elements in the queue before triggering the
 process.
 
-**Process Path**: The absolute path to the process on the computer or
+**Process path**: The absolute path to the process on the computer or
 a URL to the git repo hosting the process.
+
+**Is path a git repo?**: Toggle this on if the process path given is a URL to a git repo.
 
 **Arguments**: Arguments to be passed to the process at runtime.
 This value is passed as a raw string. It's recommended using a json string for more
 complex arguments.
 
-**Is git repo?**: Toggle this on if the process path given is a URL to a git repo.
-
-**Is blocking?**: If this is off the process is allowed to run parallel to other
-non-blocking processes. If it's on the process will always run alone
-on the worker machine.
-
----
-
-## Creating single triggers
-
-When creating a new single trigger the following pop-up is shown:
-
-![single trigger](images/new%20single%20trigger.png)
-
-**Trigger Name**: The name of the trigger to be shown in the trigger table.
-
-**Process Name**: The name of the process. This will be shown in the triggers tab as 
-well as any logs created by the process.
-
-**Trigger Date**: The date to trigger the process.
-
-**Trigger Time**: The time on trigger date to trigger the process.
-
-**Process Path**: The absolute path to the process on the computer or
-a URL to the git repo hosting the process.
-
-**Arguments**: Arguments to be passed to the process at runtime.
-This value is passed as a raw string. It's recommended using a json string for more
-complex arguments.
-
-**Is git repo?**: Toggle this on if the process path given is a URL to a git repo.
-
-**Is blocking?**: If this is off the process is allowed to run parallel to other
+**Is process blocking?**: If this is off the process is allowed to run parallel to other
 non-blocking processes. If it's on the process will always run alone
 on the worker machine.
 
@@ -141,5 +133,13 @@ on the worker machine.
 
 ## Editing an existing trigger
 
-To edit an existing trigger simply double-click it in the tables. This will open a pop-up
+To edit an existing trigger simply click it in the tables. This will open a pop-up
 to edit the trigger.
+
+Here it's also possible to **enable/disable** a trigger. When a trigger is disabled its status is set to "Paused"
+and it will not run before being enabled again. When a trigger's status is either "Paused" or "Failed" it needs to be
+enabled before it will run again which will set its status to "Idle" indicating it's waiting for its trigger event.
+
+You can also **delete** a trigger. This will permanently remove the trigger from the database and cannot be undone.
+
+![edit trigger](images/edit%20trigger.png)

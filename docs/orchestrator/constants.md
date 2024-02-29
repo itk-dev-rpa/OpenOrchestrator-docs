@@ -27,20 +27,10 @@ processes in a safe and central location.
 
 ## Description of the UI
 
-1. Table constants.
-2. Table of credentials.
-3. Control buttons.
+At the top are buttons to create new constants and credentials. Below that are two tables
+for viewing existing constants and credentials respectively.
 
 ![logging tab](images/constants.png)
-
-### Control Buttons
-
-The **Update** button updates the tables with the information in the database.
-At the moment the tables will not automatically update.
-
-The **Delete** button will delete the selected trigger. This is permanent and can't be reversed.
-
-The **New constant** and **New credential** buttons are used to create new constants and credentials.
 
 ---
 
@@ -51,9 +41,9 @@ When creating a new constant the following pop-up is shown:
 ![constant popup](images/new%20constant.png)
 
 **Name**: The name of the constant. This must be unique from other constants' names.
-If you try to create a new constant with an existing name you'll overwrite the existing one.
+If you try to create a new constant with an existing name an error will be shown.
 
-**Value**: The value of the constant. Note that this is a string value and will need to be converted by the 
+**Value**: The value of the constant. Note that this is a raw string value and will need to be converted by the 
 automation process if needed.
 
 ---
@@ -64,20 +54,22 @@ When creating a new credential the following pop-up is shown:
 
 ![constant popup](images/new%20credential.png)
 
-**Name**: The name of the credential. This must be unique from other credentials' names.
-If you try to create a new credential with an existing name you'll overwrite the existing one.
+**Name**: The name of the credential. This must be unique from other credential names.
+If you try to create a new credential with an existing name an error will be shown.
 
 **Username**: The username of the credential.
 
 **Password**: The password of the credential. The password is encrypted using the encryption key
-defined in the Settings tab before being sent to the database. The shown value in the table 
-is the encrypted password. There is no way to retrieve unencrypted passwords from Orchestrator.
+defined in the Settings tab before being sent to the database. The value shown in the credentials
+table is the number of stored encrypted bytes and an estimate of the number of decrypted bytes.
+There is no way to retrieve unencrypted passwords from Orchestrator.
 
 ---
 
 ## Editing existing constants and credentials
 
-To edit an existing constant or credential simply double-click it in the table.
+To edit an existing constant or credential simply click it in the table.
+Here you can also delete the constant or credential which will permanently remove it from the database.
 
 ---
 
@@ -88,10 +80,11 @@ raw strings, you can easily insert csv, json or base64 strings into the tables i
 your automation processes needs it.
 
 An example could be API credentials where you not only have a password but also a tenant and client id.
-This could be inserted into the password field of a credential as:
+This could be inserted into the password field of a credential as a json string:
 
 ```json
 {"password": "Hunter2", "client_id": "52a8ff3c-0ea0-4e0f-998b-a64803de09b8", "tenant_id": "1c3de1da-f17b-4a00-a833-a4307a08c1a8"}
 ```
 
-This can then easily be unpacked as part of your automation process and it won't bloat your credentials.
+This can then easily be unpacked as part of your automation process and you can store
+multiple pieces of related data in a compact manner.

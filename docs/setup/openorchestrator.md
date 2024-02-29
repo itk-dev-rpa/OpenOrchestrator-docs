@@ -30,7 +30,7 @@ To install the newest version of OpenOrchestrator open up a terminal (Command Pr
 pip install OpenOrchestrator
 ```
 
-If you want a specific version e.g. v0.0.1:
+Or if you want a specific version e.g. v0.0.1:
 
 ```
 pip install OpenOrchestrator==0.0.1
@@ -40,35 +40,27 @@ pip install OpenOrchestrator==0.0.1
 
 ## Setup Orchestrator
 
-When OpenOrchestrator has been installed type into the terminal:
+When OpenOrchestrator has been installed type the following command into a terminal:
 
 ```
 python -m OpenOrchestrator -o
 ```
 
-This will launch Orchestrator and you will see a window like this:
+This will launch Orchestrator and a browser will automatically open a window like this:
 ![Orchestrator Settings tab](images/settings-tab.png)
 
+**Note**: Even though Orchestrator runs in a browser it's not connected to the internet
+other than the OpenOrchestrator database you choose to connect to.
+
 Insert the connection string to the database and generate a new encryption key
-by clicking the 'New key' button.
+by clicking the 'Generate key' button.
 
 **Remember** to write down the encryption key as it must be the same every time
 anyone wants to connect to the same database!
 
 Then click the 'Connect' button. The text fields and the 'Connect' button should become greyed out
-indicating the connection was successful.
+and a message should say "Connected" indicating the connection was successful.
 
 The first time OpenOrchestrator connects to a freshly installed database you need to press the
 'Initialize Database' button. This will setup all the needed tables in the database. Pressing
 the button again later should have no effect.
-
----
-
-## Using private GIT repos
-
-If you're using private repos on Github or similar to host your automation processes
-it's important to setup the worker machines to be able to clone these private repos.
-
-On Github you can set up an SSH connection that uses a key file on the computer to
-authenticate. Other Git hosting services probably has something similar.
-[Github: Connection with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)

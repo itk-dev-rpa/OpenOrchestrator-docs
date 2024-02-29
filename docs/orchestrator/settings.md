@@ -15,7 +15,7 @@ and establish a connection to the central database.
 3. Click connect to connect using the given connection string. The 'Connect' button and text fields will
 be greyed out if the connection was successful.
 4. To disconnect again press 'Disconnect'.
-5. To generate a new encryption key press 'New key'. Remember to save the key, as it will be lost
+5. To generate a new encryption key press 'Generate key'. Remember to save the key, as it will be deleted
 when Orchestrator is closed.
 6. The first time OpenOrchestrator is used you can press 'Initialize Database' to create all the needed
 tables in the central database.

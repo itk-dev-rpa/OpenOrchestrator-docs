@@ -13,5 +13,6 @@ The overall steps are:
 1. Setup a database.
 2. Install python.
 3. Install OpenOrchestrator via pip.
+4. Install Git.
 
 The subsections of this page will go deeper into the setup steps.

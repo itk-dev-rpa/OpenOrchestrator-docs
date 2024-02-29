@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Database Schemas
-nav_order: 4
+nav_order: 7
 ---
 
 # Database Schemas
@@ -10,9 +10,9 @@ nav_order: 4
 
 This sections showcases the database schemas in detail. This is probably not
 relevant to most users and can be skipped. If you want to extract data for
-statistic purposes it's nice to know what data is located where.
+statistics it's nice to know what data is located where.
 
-Since OpenOrchestrator uses an ORM engine to handle SQL transactions
+Since OpenOrchestrator uses an ORM to handle SQL transactions
 and because it's designed to be SQL dialect agnostic, the exact data types
 and layout may vary.
 
