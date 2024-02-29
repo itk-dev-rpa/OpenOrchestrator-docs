@@ -6,7 +6,7 @@ nav_order: 0
 
 # Home
 
-This documentation introduces the OpenOrchestrator project v1.0.0.
+This documentation introduces the OpenOrchestrator project v1.3.1.
 
 ## Reading these docs
 
@@ -32,12 +32,13 @@ A very simple drawing of how OpenOrchestrator works can be seen below:
 
 ![Architecture](docs/images/architecture.png)
 
-A database holds all information regarding the automation processes:
+A central database holds all information regarding the automation processes:
 
 - Schedules
 - Logs
 - Constants
 - Credentials
+- Queues
 
 Administrators uses an app named 'Orchestrator' to control and view the data in the database,
 and another app named 'Scheduler' runs on the worker machines reading the data from the database

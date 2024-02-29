@@ -21,7 +21,7 @@ A log contains the following information:
 
 **Log time**: The time and date the log was created.
 
-**Log level**: The level the log was created at. There are 3 levels Trace, Info and Error.
+**Log level**: The level the log was created at. There are 3 levels: Trace, Info and Error.
 
 **Process Name**: The name of the process that created the log. This is defined on the trigger.
 
@@ -31,9 +31,10 @@ A log contains the following information:
 
 ## Description of the UI
 
-1. Table of logs.
-2. Filter options.
-3. Update button.
+At the top of the log tab are filtering options to only show relevant logs.
+
+Below that a table of all the relevant logs are displayed. By default the logs are sorted by
+the log time with the newest log first. The sorting can be changed by clicking the column names.
 
 ![logging tab](images/logs.png)
 
@@ -41,22 +42,25 @@ A log contains the following information:
 
 ## Filter Options
 
-When retrieving logs it's possible to apply filters to only show relevant logs.
-At the moment only 100 logs are fetched. To get to the specific logs you want to see use the filter options.
+When applying filters the table is automatically updated to match the filter.
 
-**Date from**: The date and time where logs should be created at or after.
+The filter options are as follows:
 
-**Date to**: The date and time where logs should be created at or before.
+**From date**: The date and time where the logs must be created after.
 
-**Process name**: The name of the process that created the log. The dropdown will
-automatically contain all unique process names in the log database.
+**To date**: The date and time where the logs must be created before.
 
-**Log level**: The level the log was created at. Trace, Info or Error.
+**Process name**: The name of the process that created the log. The dropdown menu
+will contain all processes that has created logs in the database.
+
+**Level**: The level of the log. Trace, Info or Error.
+
+**Limit**: The maximum amount of logs to load from the database. Loading many logs
+can potentially be slow. The newest logs matching the filters will be loaded first.
 
 ---
 
-## Viewing Multiline Logs
+## Viewing long messages
 
-To view log messages that don't fit in the table double-click the log to open it in a pop-up window.
-
-It's also possible to copy the text to clipboard by pressing ctrl+c when the pop-up is in focus.
+To view log messages that don't fit in the table click the log in the table
+to open it in a pop-up window. Click outside of the popup to close it.
