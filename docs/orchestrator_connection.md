@@ -47,6 +47,29 @@ orchestrator_connection = OrchestratorConnection(process_name: str, connection_s
 or with different encryption keys within the same process as the connection is dependent on global state.
 Ideally you should only create a single connection and then pass it around.
 
+## Process arguments
+
+Any arguments defined when the trigger was created in Orchestrator can be accessed like this:
+
+```python
+orchestrator_connection.process_arguments
+```
+
+For more complicated arguments it's recommended to use json objects. The argument could be given to Orchestrator like this:
+
+```json
+{"name": "John", "number of legs": 2, "email": "email@email.com"}
+```
+
+And then unpacked in code:
+
+```python
+import json
+argument_dict = json.loads(orchestrator_connection.process_arguments)
+name = argument_dict["name"]
+```
+
+
 ## Creating logs
 
 When creating logs you need to use one of three functions: 
